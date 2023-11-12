@@ -1,0 +1,118 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background: #f2f6e9;
+}
+.header {
+    background-image: url('images/profile-background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    font-family: Dancing Script;
+}
+.description {
+    left: 50%;
+    position: absolute;
+    top: 45%;
+    transform: translate(-50%, -55%);
+    text-align: center;
+    font-family: Dancing Script;
+    font-weight: 100;
+}
+
+.navbar {
+    background: #6f0303;
+    font-family: Pacifico;
+    margin-bottom: 2px;
+}
+
+.nav-link, .navbar-brand {
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color : #000;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.page-footer {
+    background-color: #6f0303;
+    color: #ccc;
+    padding: 60px 0 30px;
+    font-family: Dancing Script;
+}
+
+.footer-copyright {
+    color: #ccc;
+    padding: 40px 0;
+}
+
+@media (max-width: 575.98px) {
+    .description {
+        left: 0;
+        padding: 0 15px;
+        position: absolute;
+        top: 10%;
+        transform: none;
+        text-align: center;
+    }
+
+    .description h1 {
+        font-size: 2em;
+    }
+
+
+    .description p {
+        font-size: 1.2rem;
+    }
+
+    .features {
+        margin: 0;
+    }
+}
+#bride1{
+    text-align: center;
+    font-family: Dancing Script;
+    font-weight: 100;
+}
+#bride1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+}
+#bride1 .pro{
+    width:23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid#cce7d0;
+    border-radius:25px ;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+
+}
+#bride1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.08);
+
+}
+
+#bride1 .pro img{
+    width: 100%;
+    border-radius:20px ;
+}
+
+#bride1 .pro .description{
+    text-align: start;
+    padding: 5px 0;
+}

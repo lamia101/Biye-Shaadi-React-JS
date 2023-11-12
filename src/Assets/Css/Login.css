@@ -1,0 +1,122 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background: #f2f6e9;
+}
+
+.header {
+    background-image: url('../Images/traditional-marriage-vows-65174a538b040.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.navbar {
+    background: #6f0303;
+    font-family: Pacifico, serif;
+    margin-bottom: 2px;
+}
+
+.nav-link, .navbar-brand {
+    color: #fff;
+    cursor: pointer;
+}
+.navbar-brand{
+    font-size: 30px;
+
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color : #000;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.container1 {
+    position: absolute;
+    top: 120px;
+    right:39%;
+    margin: 20px;
+    max-width: 400px;
+    padding: 16px;
+    background-color: rgba(108, 105, 105, 0.577);
+    font-family: Arial, Helvetica, sans-serif;
+    color:#fff;
+
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f5f4f4;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #b76c6c;
+    outline: none;
+}
+.btn-outline-light {
+    background-color: #38c604cf;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn-outline-light:hover {
+    opacity: 1;
+}
+
+.page-footer {
+    background-color: #6f0303;
+    color: #ccc;
+    padding: 60px 0 30px;
+    font-family: Dancing Script, serif;
+}
+
+.footer-copyright {
+    color: #fdfdfd;
+    padding: 40px 0;
+}
+
+
+@media (max-width: 576px) {
+    .container1 {
+        left: 0;
+        padding: 0 15px;
+        position: absolute;
+        top: 10%;
+        transform: none;
+        text-align: center;
+    }
+
+    .container1 h1 {
+        font-size: 2em;
+    }
+
+    .container1 p {
+        font-size: 1.2rem;
+    }
+
+    .features {
+        margin: 0;
+    }
+}
