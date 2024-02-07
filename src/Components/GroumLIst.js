@@ -32,11 +32,13 @@ function GroomList(props) {
                 <div className="pro-container">
                     {
                         data && data.map((info, idx) => (
-                            <Link to="/abrar" className="pro" key={info.id}>
-                                <img src={`http://localhost:8000${info.image}`} alt={info.name} />
-                                <h5>{info.name}</h5>
-                            </Link>
-                        ))
+                            info.gender==="Male" && (
+                                    <Link to="/abrar" className="pro" key={info.id}>
+                                        <img src={`http://localhost:8000${info.image}`} alt={info.name} />
+                                        <h5>{info.name}</h5>
+                                    </Link>
+                                ))
+                            )
                     }
                 </div>
             </section>

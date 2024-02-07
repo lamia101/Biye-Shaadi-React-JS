@@ -1,17 +1,16 @@
 import React from 'react';
 import NavBar from "../Components/NavBar";
-import Jaky from "../Components/Jaky";
+import LoginHeader from "../Components/LoginHeader";
 import Footer from "../Components/Footer";
-import Jubayer from "../Components/Jubayer";
 
-function JubaerPage(props) {
+function LoginPage(props) {
     return (
         <div>
             <NavBar/>
-            <Jubayer />
+            <LoginHeader/>
             <Footer/>
         </div>
     );
 }
 
-export default JubaerPage;
+export default LoginPage;
