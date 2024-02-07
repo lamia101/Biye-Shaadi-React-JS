@@ -3,8 +3,8 @@ import {Link} from "react-router-dom";
 
 function NavBar(props) {
     return (
-        <nav class="navbar navbar-expand-md">
-            <a className="navbar-brand" href="main.html">Biye Shaadi</a>
+        <nav className="navbar navbar-expand-md">
+            <Link className="navbar-brand" to="/">Biye Shaadi</Link>
             <buclassName className="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
                 <span className="navbar-toggler-icon"></span>
             </buclassName>

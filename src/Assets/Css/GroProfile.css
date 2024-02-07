@@ -116,3 +116,7 @@ body {
     text-align: start;
     padding: 5px 0;
 }
+.pro img{
+    width: 100%;
+    height: auto;
+}
