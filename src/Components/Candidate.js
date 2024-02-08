@@ -2,25 +2,20 @@ import React from 'react';
 import abrar from "../Assets/Images/Abrar.JPG"
 import '../Assets/Css/Gprofile.css';
 
-function Abrar(props) {
+function Candidate({data}) {
     return (
         <div className="container emp-profile">
             <form method="post">
                 <div className="row">
                     <div className="col-md-4">
                         <div className="profile-img">
-                            <img src={abrar} alt="" />
+                            <img src={`http://localhost:8000${data.image}`} alt={data.name} />
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="profile-head">
-                            <h5>Abrar Hameem</h5>
-                            <h6>Web Developer and Designer</h6>
-                            <ul className="nav nav-tabs" id="myTab" role="tablist">
-                                <li className="nav-item">
-                                    <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                                </li>
-                            </ul>
+                            <h5>{data.name}</h5>
+                            <h6>{data.profession}</h6>
                         </div>
                     </div>
                 </div>
@@ -29,12 +24,8 @@ function Abrar(props) {
                     <div className="col-md-4">
                         <div className="profile-work">
                             <p>SOCIAL ACCOUNT</p>
-                            <a href="#">Instagram</a><br/>
-                            <a href="#">Facebook</a><br/>
-                            <a href="#">Twitter</a><br/>
-                            <p>PROFESSIONAL ACCOUNT</p>
-                            <a href="#">LinkedIn</a><br/>
-                            <a href="#">Resume</a><br/>
+                            <a href={data.facebook_link} target="_blank" rel="noreferrer">Facebook</a><br/>
+                            <a href={data.instagram_link} target="_blank" rel="noreferrer">Instagram</a><br/>
                         </div>
                     </div>
                     <div className="col-md-8">
@@ -42,18 +33,10 @@ function Abrar(props) {
                             <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <label>User Id</label>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <p>Hameem123</p>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-md-6">
                                         <label>Name</label>
                                     </div>
                                     <div className="col-md-6">
-                                        <p>Abrar Hameem</p>
+                                        <p>{data.name}</p>
                                     </div>
                                 </div>
                                 <div className="row">
@@ -61,7 +44,7 @@ function Abrar(props) {
                                         <label>Age</label>
                                     </div>
                                     <div className="col-md-6">
-                                        <p>23</p>
+                                        <p>{data.age}</p>
                                     </div>
                                 </div>
                                 <div className="row">
@@ -69,15 +52,23 @@ function Abrar(props) {
                                         <label>Height</label>
                                     </div>
                                     <div className="col-md-6">
-                                        <p>5'10"</p>
+                                        <p>{data.height}</p>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <label>Home District</label>
+                                        <label>Permanent Address</label>
                                     </div>
                                     <div className="col-md-6">
-                                        <p>Dhaka</p>
+                                        <p>{data.permanent_address}</p>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <label>Current Address</label>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <p>{data.current_address}</p>
                                     </div>
                                 </div>
                                 <div className="row">
@@ -85,7 +76,7 @@ function Abrar(props) {
                                         <label>Email</label>
                                     </div>
                                     <div className="col-md-6">
-                                        <p>jucse29.398@gmail.com</p>
+                                        <p>{data.email}</p>
                                     </div>
                                 </div>
                                 <div className="row">
@@ -93,7 +84,7 @@ function Abrar(props) {
                                         <label>Phone</label>
                                     </div>
                                     <div className="col-md-6">
-                                        <p>017xxxxxxxx</p>
+                                        <p>{data.phone}</p>
                                     </div>
                                 </div>
                                 <div className="row">
@@ -101,7 +92,31 @@ function Abrar(props) {
                                         <label>Profession</label>
                                     </div>
                                     <div className="col-md-6">
-                                        <p>Web Developer and Designer</p>
+                                        <p>{data.profession}</p>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <label>Date of Birth</label>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <p>{data.dob}</p>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <label>Marital Status</label>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <p>{data.marital_status}</p>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <label>Account for</label>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <p>{data.account_for}</p>
                                     </div>
                                 </div>
                             </div>
@@ -113,4 +128,4 @@ function Abrar(props) {
     );
 }
 
-export default Abrar;
+export default Candidate;

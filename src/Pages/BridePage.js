@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from "../Components/NavBar";
-import Bridelist from "../Components/Bridelist";
+import Bridelist from "../Components/BrideList";
 import Footer from "../Components/Footer";
 
 function BridePage(props) {

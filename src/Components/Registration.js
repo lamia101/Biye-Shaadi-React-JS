@@ -193,13 +193,13 @@ function Registration(props) {
                     <label className="col-sm-3 control-label">Marital Status</label>
                     <div className="col-sm-9">
                         <label className="radio-inline">
-                            <input className="mx-3" type="radio" onClick={dataChange} id="unMarried" value="unMarried" name="marital_status" /> Unmarried
+                            <input className="mx-3" type="radio" onClick={dataChange} id="unMarried" value="Unmarried" name="marital_status" /> Unmarried
                         </label>
                         <label className="radio-inline">
-                            <input className="mx-3" type="radio" onChange={dataChange} id="married" value="married" name="marital_status" /> Married
+                            <input className="mx-3" type="radio" onChange={dataChange} id="married" value="Married" name="marital_status" /> Married
                         </label>
                         <label className="radio-inline">
-                            <input className="mx-3" type="radio" onChange={dataChange} id="divorced" value="divorced" name="marital_status" /> Divorced
+                            <input className="mx-3" type="radio" onChange={dataChange} id="divorced" value="Divorced" name="marital_status" /> Divorced
                         </label>
                     </div>
                 </div>
