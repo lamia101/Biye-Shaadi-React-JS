@@ -52,6 +52,7 @@ function Registration(props) {
         e.preventDefault();
         setResponse(false);
         setClick(true);
+        setAlreadyExist(false);
         if (validateForm()) {
             console.log(data);
             setValid(true);
@@ -71,7 +72,7 @@ function Registration(props) {
                     setValidResponse(true);
                 })
                 .catch((error) => {
-                    if (error.response && error.response.status === 400) {
+                    if (error.response && error.response.status === 409) {
                         setAlreadyExist(true);
                         setResponse(true);
                         setValidResponse(false);
@@ -239,7 +240,7 @@ function Registration(props) {
                 }
                 {
                     alreadyExist && !validResponse && (
-                        <div>User already exist please change somethings</div>
+                        <div>Email already exist please change your email.</div>
                     )
                 }
                 <button type="submit" className="btn btn-outline-secondary btn-lg" onClick={submitToBackend}>Register</button>

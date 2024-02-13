@@ -110,3 +110,13 @@ body {
         margin: 0;
     }
 }
+.title{
+    color:blue;
+    font-size: 30px;
+    font-weight: 500;
+}
+.subTitle{
+    color:blue;
+    font-size: 25px;
+    font-weight: 500;
+}
