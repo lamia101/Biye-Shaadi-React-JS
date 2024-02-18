@@ -1,8 +1,46 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import succ1 from '../Assets/Images/richitapu.jpg';
 import succ2 from '../Assets/Images/successstory.jpg';
+import axios from "axios";
 
 function Success(props) {
+
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+
+    const inputChange = (e) => {
+        const { name, value } = e.target;
+        setData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    }
+
+    const saveMessage = (e) => {
+        e.preventDefault();
+
+        // Remove any additional properties from data
+        const { message, name, email } = data;
+        const sanitizedData = { message, name, email };
+
+        if (sanitizedData.name.trim() !== "" && sanitizedData.email.trim() !== "" && sanitizedData.message.trim() !== "") {
+            axios.post("http://127.0.0.1:8000/api/getInTouch/", sanitizedData)
+                .then((res) => {
+                    const responseData = res.data;
+                    window.alert("Your feedback is recorded");
+                    console.log(responseData);
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        } else {
+            window.alert("Please fill out all the fields");
+        }
+    }
+
     return (
         <Fragment>
             <div className="container features">
@@ -27,15 +65,15 @@ function Success(props) {
                     <div className="col-lg-4 col-md-4 col-sm-12">
                         <h3 className="feature-title">Get in Touch!</h3>
                         <div className="form-group">
-                            <input type="text" className="form-control" placeholder="Name" name="name" />
+                            <input type="text" onChange={inputChange} className="form-control" placeholder="Name" name="name" />
                         </div>
                         <div className="form-group">
-                            <input type="email" className="form-control" placeholder="Email Address" name="email" />
+                            <input type="email" className="form-control" onChange={inputChange} placeholder="Email Address" name="email" />
                         </div>
                         <div className="form-group">
-                            <textarea className="form-control" placeholder="Your Message" rows="4" />
+                            <textarea name="message" className="form-control" onChange={inputChange} placeholder="Your Message" rows="4" value={data.message} />
                         </div>
-                        <input type="submit" className="btn btn-secondary btn-block" value="Send" name="submit" />
+                        <input type="submit" onClick={saveMessage} className="btn btn-secondary btn-block" value="Send" name="submit" />
                     </div>
                 </div>
             </div>

@@ -13,6 +13,7 @@ function LoginHeader(props) {
         try {
             const response = await axios.post('http://localhost:8000/api/login/', { email, password });
             console.log(response.data);
+            localStorage.setItem("isLogin","true");
             navigate("/candidate", { state: response.data });
         } catch (error) {
             console.log('Login failed:', error.message);

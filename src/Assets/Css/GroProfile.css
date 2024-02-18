@@ -4,11 +4,11 @@ body {
     background: #f2f6e9;
 }
 .header {
-    background-image: url('images/profile-background.jpg');
+    /*background-image: url('images/profile-background.jpg');*/
     background-size: cover;
     background-position: center;
     position: relative;
-    font-family: Dancing Script;
+    font-family: Dancing Script, serif;
 }
 .description {
     left: 50%;
