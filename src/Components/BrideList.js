@@ -15,7 +15,7 @@ function BrideList(props) {
     }, []);
 
     const changePage = (info) => {
-        navigate("/candidate", { state: info });
+        localStorage.getItem("isLogin")==="true" ?  navigate("/candidate", { state: info }):navigate("/login")
     }
 
     return (

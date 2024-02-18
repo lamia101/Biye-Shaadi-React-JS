@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import succ1 from '../Assets/Images/richitapu.jpg';
 import succ2 from '../Assets/Images/successstory.jpg';
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 function Success(props) {
 
@@ -74,6 +75,7 @@ function Success(props) {
                             <textarea name="message" className="form-control" onChange={inputChange} placeholder="Your Message" rows="4" value={data.message} />
                         </div>
                         <input type="submit" onClick={saveMessage} className="btn btn-secondary btn-block" value="Send" name="submit" />
+                        <Link to="/feedback" className="btn btn-secondary btn-block">Feedback</Link>
                     </div>
                 </div>
             </div>

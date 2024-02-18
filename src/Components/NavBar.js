@@ -14,11 +14,12 @@ function NavBar(props) {
                         <Link to="/"><a className="nav-link">Home</a></Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/login"><a className="nav-link">Login</a></Link>
-                    </li>
-                    <li className="nav-item">
                         <Link to="/register"><a className="nav-link">Register</a></Link>
                     </li>
+                    <li className="nav-item">
+                        <Link to="/login"><a className="nav-link">Login</a></Link>
+                    </li>
+
                 </ul>
             </div>
         </nav>

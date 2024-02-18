@@ -15,7 +15,7 @@ function FeedBacks(props) {
     });
 
     return (
-       <Container className="container _mt-5 features">
+       <Container className="container mt-0 features">
            <Row className="mx-0">
 
                {data && data.map((comment, index) => (

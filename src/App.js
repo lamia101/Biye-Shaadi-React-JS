@@ -17,6 +17,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import GroomPage from "./Pages/GroomPage";
 import CandidatePage from "./Pages/CandidatePage";
 import BridePage from "./Pages/BridePage";
+import FeedBackPage from "./Pages/FeedBackPage";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/groom" element={<GroomPage />} />
                 <Route path="/bride" element={<BridePage />} />
                 <Route path="/candidate" element={<CandidatePage />} />
+                <Route path="/feedback" element={<FeedBackPage />} />
 
             </Routes>
         </BrowserRouter>
